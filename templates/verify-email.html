@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block body %}
+
+    <div class="container">
+	<div class="form-container">
+        {% if message: %}:
+            <h2 class="sign-up-logo" style="border:1px solid red; margin:0 0 1rem 0;">{{message}}</h2>
+        {% endif %}
+        <h2 class="sign-up-logo">Enter Your verification code</h2>
+        <form action="{{url_for('signUpSuccess')}}" method="post">
+            <input type="text" name="otp" required autocomplete="off">
+            <input type="submit" id="submit">
+        </form>
+    </div>
+    </div>
+
+{% endblock %}

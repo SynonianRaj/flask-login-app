@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+	{% block title %}
+		Sign Up
+	{% endblock %}
+
+	{% block body %}
+	<div class="container">
+		<div class="form-container">
+			{% if message: %}:
+					<h2 class="sign-up-logo" style="border:2px solid red; padding:0.5rem 0 ">{{message}}</h2>
+			{% endif %}
+			<div>
+				<h1 class="sign-up-logo">Sign Up</h1>
+				<p class="sign-up-logo">It's Quick and Easy</p>
+			</div>
+		<form id="myForm" class="form-inline" method="post">
+			<input name="fname" id="fname" type="text" autofocus autocomplete="off" required placeholder="First Name">
+			<input name="lname" id="lname" type="text" autofocus autocomplete="off" required placeholder="Last Name">
+			<input name ="email" id="email" type="email" autofocus autocomplete="off" required placeholder="Email">
+			<input name ="password" id="password" type="password" autofocus autocomplete="off" required placeholder="Password">
+			<input name ="confirm-password" id="confirm" type="password" autofocus autocomplete="off" required placeholder="Retype Password">
+			<input type="submit" value="Sign Up" onclick="signupFunction()">
+		</form>
+			<p class="sign-up-logo">You have already registered ? <a href="{{url_for('login_page')}}">Login Here</a></p>
+		</div>
+	</div>
+{% endblock %}
