@@ -12,11 +12,11 @@ app = Flask(__name__)
 bcrypt = Bcrypt(app)
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
-app.config['MAIL_USERNAME'] = 'aryaankitkumarsingh@gmail.com'
-app.config['MAIL_PASSWORD'] = '8541078756'
+app.config['MAIL_USERNAME'] = 'yourgmail@gmail.com'
+app.config['MAIL_PASSWORD'] = 'YourGmailPassword'
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
-app.config['MAIL_DEFAULT_SENDER'] = 'aryaankitkumarsingh@gmail.com'
+app.config['MAIL_DEFAULT_SENDER'] = 'yourgmail@gmail.com'
 app.secret_key = char
 mail = Mail(app)
 
